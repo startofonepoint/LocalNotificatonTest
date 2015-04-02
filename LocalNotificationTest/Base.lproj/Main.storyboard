@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14D105g" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LocalNotificationTest" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +15,44 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yff-WG-fYN">
+                                <rect key="frame" x="241" y="138" width="118" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.2744498212" blue="0.27518664980000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="LocalPush">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendLocalPush:" destination="BYZ-38-t0r" eventType="touchUpInside" id="95a-Oq-nGn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JKg-ye-Ebf">
+                                <rect key="frame" x="249" y="202" width="102" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.2744498212" blue="0.27518664980000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Send Photo">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="callActivitiControll:" destination="BYZ-38-t0r" eventType="touchUpInside" id="A7S-cS-eos"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Yff-WG-fYN" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="138" id="3Sz-10-gY2"/>
+                            <constraint firstAttribute="centerX" secondItem="Yff-WG-fYN" secondAttribute="centerX" id="PBF-UA-Ijc"/>
+                            <constraint firstItem="JKg-ye-Ebf" firstAttribute="top" secondItem="Yff-WG-fYN" secondAttribute="bottom" constant="34" id="lJW-7r-LT2"/>
+                            <constraint firstAttribute="centerX" secondItem="JKg-ye-Ebf" secondAttribute="centerX" id="xz7-9E-mKv"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="sendPhoto" destination="JKg-ye-Ebf" id="WxK-Ac-ITU"/>
+                        <outlet property="sendPush" destination="Yff-WG-fYN" id="Ppu-gg-qnf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="414" y="429"/>
         </scene>
     </scenes>
 </document>
